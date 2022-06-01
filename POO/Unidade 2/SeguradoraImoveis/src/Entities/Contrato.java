@@ -5,11 +5,23 @@ import java.util.ArrayList;
 public abstract class Contrato {
     private Cliente cliente;
     private double valorImovel;
+    private Sinistro sinistro;
     private static ArrayList<Contrato> lstContrato = new ArrayList<Contrato> ();
 
-    public Contrato(Cliente cliente, double valorImovel) {
+    public Contrato(Cliente cliente, double valorImovel, Sinistro sinistro) {
         this.cliente = cliente;
         this.valorImovel = valorImovel;
+        this.sinistro = sinistro;
+    }
+
+
+    public Sinistro getSinistro() {
+        return sinistro;
+    }
+
+
+    public void setSinistro(Sinistro sinistro) {
+        this.sinistro = sinistro;
     }
 
 

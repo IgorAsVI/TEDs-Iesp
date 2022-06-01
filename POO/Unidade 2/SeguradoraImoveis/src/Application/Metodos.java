@@ -4,6 +4,7 @@ import Entities.Cliente;
 import Entities.Contrato;
 import Entities.ContratoEmpresarial;
 import Entities.ContratoResidencial;
+import Entities.Sinistro;
 import Entities.Enum.TipoPessoa;
 import Entities.Enum.TipoRamo;
 import Entities.Enum.TipoResidencia;
@@ -19,6 +20,19 @@ public class Metodos {
             try {
                 System.out.print(txt);
                 inteiro = new Scanner(System.in).nextInt();
+                break;
+            } catch (Exception exception) {
+                System.out.println("Valor não é um inteiro. Tente novamente!");
+            }
+        }
+        return inteiro;
+    }
+    public static long validaLong(String txt) {
+        Long inteiro;
+        while (true) {
+            try {
+                System.out.print(txt);
+                inteiro = new Scanner(System.in).nextLong();
                 break;
             } catch (Exception exception) {
                 System.out.println("Valor não é um inteiro. Tente novamente!");
@@ -58,7 +72,7 @@ public class Metodos {
     public static void criarClientes() {
         TipoPessoa tipopessoa = null;
         System.out.println("Criação de cliente: ");
-        int doc = Metodos.validaInteiro("Digite seu documento: ");
+        long doc = Metodos.validaLong("Digite seu documento: ");
         String nome = Metodos.validaString("Digite seu Nome: ");
         int tipo = Metodos.validaInteiro("\n1-Pessoa Física\n2-Pessoa Jurídica \nEscolha seu tipo de pessoa:");
         if (tipo == 1) {
@@ -75,7 +89,7 @@ public class Metodos {
         TipoZona tipoZona = null;
         TipoResidencia tipoResidencia = null;
         System.out.println("Criação de contato: ");
-        int doc = Metodos.validaInteiro("Digite seu documento do cliente : ");
+        long doc = Metodos.validaLong("Digite seu documento do cliente : ");
         while (!Cliente.getMapClienteDoc().containsKey(doc)) {
             System.out.println("Cliente não encontrado...");
             doc = Metodos.validaInteiro("Digite seu documento do cliente : ");
@@ -98,8 +112,22 @@ public class Metodos {
             } else if (ramo == 3) {
                 tipoRamo = TipoRamo.valueOf("AGROPECUARIA");
             }
-            Contrato contrato = new ContratoEmpresarial(cliente,valor,numeroFunc,visitas,tipoRamo);
-            Contrato.setLstContrato(contrato);
+            int SimNao = Metodos.validaInteiro("1- Sim \n2- Não\nDeseja adicionar um sinistro: ");
+            if(SimNao == 1){
+                String data = Metodos.validaString("Digite a data: ");
+                double porcentagem = Metodos.validaDouble("Digite a porcentagem desejada: ");
+
+                Sinistro sinistro = new Sinistro(data, porcentagem);
+                Sinistro.setListSinistre(sinistro);
+                Contrato contrato = new ContratoEmpresarial(cliente,valor,sinistro, numeroFunc,visitas,tipoRamo);
+                Contrato.setLstContrato(contrato);
+
+            }else{
+                Sinistro sinistro = null;
+                Contrato contrato = new ContratoEmpresarial(cliente,valor,sinistro, numeroFunc,visitas,tipoRamo);
+                Contrato.setLstContrato(contrato);
+            }
+            
         } else if (tipo == 2) {
             String endereco = Metodos.validaString("digite seu endereço: ");
             int zona = Metodos.validaInteiro("1-URBANA\n2-SUBURBANA\n3-RURAL\n Digite o a zona do seu endereço: ");
@@ -124,10 +152,24 @@ public class Metodos {
             } else if (zona == 2) {
                 tipoResidencia = TipoResidencia.valueOf("APARTAMENTO");
             }
-            Contrato contrato = new ContratoResidencial(cliente,valor,endereco,tipoZona,tipoResidencia);
-            Contrato.setLstContrato(contrato);
-        }
+            int SimNao = Metodos.validaInteiro("1- Sim \n2- Não\nDeseja adicionar um sinistro: ");
+            if(SimNao == 1){
+                String data = Metodos.validaString("Digite a data: ");
+                double porcentagem = Metodos.validaDouble("Digite a porcentagem desejada: ");
 
+                Sinistro sinistro = new Sinistro(data, porcentagem);
+                Sinistro.setListSinistre(sinistro);
+                Contrato contrato = new ContratoResidencial(cliente,valor,sinistro, endereco,tipoZona,tipoResidencia);
+                Contrato.setLstContrato(contrato);
+
+            }else{
+                Sinistro sinistro = null;
+                Contrato contrato = new ContratoResidencial(cliente,valor,sinistro, endereco,tipoZona,tipoResidencia);
+                Contrato.setLstContrato(contrato);
+            }
+            
+
+        }
 
     }
 
@@ -140,6 +182,18 @@ public class Metodos {
 
     public static void lstContrato() {
         for (Contrato c : Contrato.getLstContrato()) {
+            System.out.println(c.toString());
+        }
+    }
+
+    public static void listSinistre(){
+        for (Sinistro s: Sinistro.getListSinistre()){
+            System.out.println(s.toString());
+        }
+    }
+    public static void lstContratoSemSinistro() {
+        for (Contrato c : Contrato.getLstContrato()) {
+            if(c.getSinistro() == null)
             System.out.println(c.toString());
         }
     }

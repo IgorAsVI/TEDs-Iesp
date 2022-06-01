@@ -17,6 +17,10 @@ public class UI {
                 Metodos.lstCliente();
             }else if (opcao == 5){
                 Metodos.lstContrato();
+            }else if (opcao == 6){
+                Metodos.listSinistre();
+            }else if (opcao == 7){
+                Metodos.lstContratoSemSinistro();
             }else if(opcao == 8 ){
                 System.out.println("Obrigado por usar nosso app");
                 break;

@@ -7,8 +7,8 @@ public class ContratoEmpresarial extends Contrato {
     private int visitasDiarias;
     private TipoRamo tipoRamo;
 
-    public ContratoEmpresarial(Cliente cliente,double valor,int numeroFuncionarios, int visitasDiarias, TipoRamo tipoRamo) {
-        super(cliente,valor);
+    public ContratoEmpresarial(Cliente cliente,double valor,Sinistro sinistro, int numeroFuncionarios, int visitasDiarias, TipoRamo tipoRamo) {
+        super(cliente,valor, sinistro);
         this.numeroFuncionarios = numeroFuncionarios;
         this.visitasDiarias = visitasDiarias;
         this.tipoRamo = tipoRamo;

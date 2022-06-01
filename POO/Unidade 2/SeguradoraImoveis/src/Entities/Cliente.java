@@ -7,13 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Cliente {
-    private int codigoPessoa;
+    private long codigoPessoa;
     private String nome;
     private TipoPessoa tipoPessoa;
     private static ArrayList<Cliente> lstClientes = new ArrayList<Cliente>();
-    private static HashMap<Integer, Cliente> mapClienteDoc = new HashMap<Integer, Cliente>();
+    private static HashMap<Long, Cliente> mapClienteDoc = new HashMap<Long, Cliente>();
 
-    public static HashMap<Integer, Cliente> getMapClienteDoc() {
+    public static HashMap<Long, Cliente> getMapClienteDoc() {
         return mapClienteDoc;
     }
 
@@ -26,17 +26,17 @@ public class Cliente {
         Cliente.lstClientes.add(cliente);
     }
 
-    public Cliente(int codigoPessoa, String nome, TipoPessoa tipoPessoa) {
+    public Cliente(long codigoPessoa, String nome, TipoPessoa tipoPessoa) {
         this.codigoPessoa = codigoPessoa;
         this.nome = nome;
         this.tipoPessoa = tipoPessoa;
     }
 
-    public int getCodigoPessoa() {
+    public long getCodigoPessoa() {
         return codigoPessoa;
     }
 
-    public void setCodigoPessoa(int codigoPessoa) {
+    public void setCodigoPessoa(long codigoPessoa) {
         this.codigoPessoa = codigoPessoa;
     }
 

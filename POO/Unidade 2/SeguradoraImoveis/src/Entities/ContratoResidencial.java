@@ -8,8 +8,8 @@ public class ContratoResidencial extends Contrato {
     private TipoZona tipoZona;
     private TipoResidencia tipoResidencia;
 
-    public ContratoResidencial(Cliente cliente,double valor,String endereco, TipoZona tipoZona, TipoResidencia tipoResidencia) {
-        super(cliente,valor);
+    public ContratoResidencial(Cliente cliente,double valor,Sinistro sinistro, String endereco, TipoZona tipoZona, TipoResidencia tipoResidencia) {
+        super(cliente,valor,sinistro);
         this.endereco = endereco;
         this.tipoZona = tipoZona;
         this.tipoResidencia = tipoResidencia;
