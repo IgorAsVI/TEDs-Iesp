@@ -10,18 +10,17 @@ public class UI {
             int opcao = new Scanner(System.in).nextInt();
             if (opcao ==1 ){
                 Metodos.criarClientes();
-                System.out.flush();
             }else if(opcao == 2){
                 Metodos.criarContrato();
-            }else if (opcao == 4){
+            }else if (opcao == 3){
                 Metodos.lstCliente();
-            }else if (opcao == 5){
+            }else if (opcao == 4){
                 Metodos.lstContrato();
-            }else if (opcao == 6){
+            }else if (opcao == 5){
                 Metodos.listSinistre();
-            }else if (opcao == 7){
+            }else if (opcao == 6){
                 Metodos.lstContratoSemSinistro();
-            }else if(opcao == 8 ){
+            }else if(opcao == 7 ){
                 System.out.println("Obrigado por usar nosso app");
                 break;
             }
@@ -32,12 +31,11 @@ public class UI {
         System.out.println("**************** Menu ****************");
         System.out.println("1 - Cadastro de clientes             |");
         System.out.println("2 - Cadastro de contratos            |");
-        System.out.println("3 - Cadastro de sinistro             |");
-        System.out.println("4 - Lista de clientes                |");
-        System.out.println("5 - Lista de contratos               |");
-        System.out.println("6 - Lista de sinistros               |");
-        System.out.println("7 - Lista de contatos sem sinistro   |");
-        System.out.println("8 - Sair                             |");
+        System.out.println("3 - Lista de clientes                |");
+        System.out.println("4 - Lista de contratos               |");
+        System.out.println("5 - Lista de sinistros               |");
+        System.out.println("6 - Lista de contatos sem sinistro   |");
+        System.out.println("7 - Sair                             |");
         System.out.println("**************************************");
         System.out.print("Selecione a opção desejada:");
 
