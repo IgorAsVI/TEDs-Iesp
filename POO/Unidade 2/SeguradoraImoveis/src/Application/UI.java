@@ -7,7 +7,8 @@ public class UI {
     public static void exibeMenu(){
         while (true) {
             UI.menu();
-            int opcao = new Scanner(System.in).nextInt();
+            int opcao = Metodos.validaInteiro("Digite a opção desejada:  ");
+
             if (opcao ==1 ){
                 Metodos.criarClientes();
             }else if(opcao == 2){
