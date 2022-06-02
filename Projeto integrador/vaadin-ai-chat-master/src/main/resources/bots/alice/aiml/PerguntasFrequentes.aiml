@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<!-- -->
+<!-- Free software (c) 2011 ALICE A.I. Foundation.   -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License     -->
+<!-- as published by the Free Software Foundation.   -->
+<!-- Complies with AIML 1.0 Tag Set Specification -->
+<!-- as adopted by the ALICE A.I. Foundation.  -->
+<!-- Last modified 11/23/2011 -->
+<!-- -->
+
+<category>
+   <pattern>Como faço para solicitar dispensa das disciplinas</pattern>
+   <template>  Através do portal do aluno online, na aba Helpdesk  </template>
+</category>
+
+<category>
+   <pattern>Quando inicia o semestre</pattern>
+   <template>  entre a primeira ou segunda semana de agosto.  </template>
+</category>
+
+<category>
+   <pattern>Qual o período de solicitar a colação de grau especial</pattern>
+   <template>   assim que sai o calendário acadêmico  </template>
+</category>
+
+<category>
+   <pattern>Ate quando posso solicitar ajuste e aproveitamento das disciplinas</pattern>
+   <template>   uma semana antes dos inicio da primeira avaliação  </template>
+</category>
+
+<category>
+   <pattern>Qual horário que consigo fala com a coordenação</pattern>
+   <template>  o secretario sempre chega de 13 ás 22h e o meio de comunicação ou telefone da instituição, email e WhatsApp pessoal do secretario.   </template>
+</category>
+
+<category>
+   <pattern>Sou Aluno do P1 posso estagiar</pattern>
+   <template>  tudo depende do desenvolvimento do aulo.  </template>
+</category>
+
+<category>
+   <pattern>Estou no meu último período porem não consegui arruma estagio o que faço</pattern>
+   <template>  o curso projeto que é a fábrica de software do professor Gláucio pra justamente ajudar os alunos nessas situações.   </template>
+</category>
+
+<category>
+   <pattern>O curso é totalmente presencial</pattern>
+   <template> sim os em EAD são Analise e Desenvolvimento de sistema e Gestão de Tecnologia da Informação. </template>
+</category>
+
+<category>
+   <pattern>Como faço pra matricula nas disciplinas para o próximo período</pattern>
+   <template>  Através do portal do aluno online em matricula.  </template>
+</category>
+
+<category>
+   <pattern>Estou com problema financeiro a coordenação resolve</pattern>
+   <template>  Não, só com setor responsável  </template>
+</category>
+
+<category>
+   <pattern>Estou me transferido pra UNIESP quais disciplinas vou cursa</pattern>
+   <template>   fazendo uma analise do seu Histórico aí saberemos quais disciplinas irá cursa e dispensar.  </template>
+</category>
+
+<category>
+   <pattern>Fiz minha matricula no curso em EAD porem não consigo entra</pattern>
+   <template>  a coordenação do curso de EAD manda o e-mail com login e senha para o aluno ter acesso do portal AVA.  </template>
+</category>
+
+<category>
+   <pattern>Como faço lançar minhas horas complementares</pattern>
+   <template> enviando através do portal do aluno online seus certificados do palestras, cursos de exceções e entre outros. </template>
+</category>
+
+<category>
+   <pattern>Caso perca primeira avaliação posso repor</pattern>
+   <template>  Sim, o aluno pode repor 1 avaliação a 2 avaliação ele tem que fazer para ser reprovado. </template>
+</category>
+
+<category>
+   <pattern>Qual valor do curso como consigo descontos</pattern>
+   <template>  Sistema para Internet – 472,98 | Sistema de Informação 902,95 sobre os descontos só no setor comercial.  </template>
+</category>
+
+<category>
+   <pattern>Quantos período tem os cursos</pattern>
+   <template>  O de Sistema pra internet são 5 períodos totalizando 2 anos e meio, o de sistema de Informação são 8 períodos totalizando 4 anos. </template>
+</category>
+
+<category>
+   <pattern>Se terminar sistema para Internet passo cursar sistema de Informação</pattern>
+   <template>   Sim, nesse caso muitas disciplinas são dispensadas aí o aluno ingressa como segunda graduação na instituição. </template>
+</category>
+
+<category>
+   <pattern>Quantas falta posso reprovar e como abonar as faltas</pattern>
+   <template>  não pode ter, mas de 50% da disciplina para poder abonar o aluno precisa enviar para o e-mail da coordenação o atestado ou documento que comprove o motivo de sua ausência </template>
+</category>
+
+<category>
+   <pattern>Quais as formas de ingresso no curso</pattern>
+   <template>  através do vestibular da instituição, transferência de outra instituição ou nota do ENEM  </template>
+</category>
+
+<category>
+   <pattern>A festa de colação de Grau sou obrigada a participar</pattern>
+   <template> No caso o aluno é obrigado a assina a ATA para poder receber o diploma a cerimônia da colação de grau que é a festa fica no seu critério em participar.  </template>
+</category>
+
+</aiml>
