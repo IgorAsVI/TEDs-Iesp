@@ -1,0 +1,5 @@
+- Modifiquei na tabela FUNCIONARIO o tipo de funcionários para 'A'(Atendente) ou para 'V'(Vendedor);
+- Modifiquei o campo "Comissão" da tabela FUNCIONARIO, todo veterinário possui comissão do tipo "NULL";
+- Modifiquei no campo "Especialização" da tabela FUNCIONARIO, todo vendedor possui especialização do tipo "NULL";
+- Modifiquei na tabela PRODUTO no campo "Tipo produto", todo produto é do tipo 'P' e todo serviço é do tipo 'S';
+- Modifiquei na tabela PRODUTO no campo valor, todo valor é do tipo DECIMAL(5,2);

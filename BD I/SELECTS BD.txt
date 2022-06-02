@@ -1,0 +1,28 @@
+Qual cliente mais gastou
+SELECT c.nome, sum(p.valor) AS valor_total FROM cliente AS c
+INNET JOIN venda AS v
+ON v.id_cliente = c.id
+INNER join produto_venda AS pv
+ON pv.id = v.id
+ORDER BY valor_total ASC LIMIT 1
+
+Lista de produto por ordem de preço
+SELECT nome, tipo,valor FROM produto
+ORDER BY valor DESC
+
+Quais clientes fizeram mais de 10 compras
+SELECT nome,count(v.id_cliente) as quantidade FROM cliente AS c
+INNER JOIN venda AS v
+ON v.id_cliente = c.id
+WHERE  quantidade > 10
+group by c.nome
+
+
+Lista de clientes
+SELECT nome FROM clientes
+
+Lista de PETS
+SELECT nome FROM Pet
+
+Lista de produto
+SELECT nome FROM produto_venda
